@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Модальные окна</title>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="modal-layer active" id="request-modal">
+            <div class="modal__wrapper">
+                <img src="img/large__logo.svg" alt="Logo">
+                <h3 class="subtitle">Оставьте заявку</h3>
+                <p class="medium__text">Оставьте заявку, и наш менеджер свяжется с вами в течение 10 минут</p>
+                <button class="icon__button modal_close__btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.70708 7.29243C8.51848 7.11027 8.26588 7.00948 8.00368 7.01176C7.74148 7.01403 7.49067 7.1192 7.30526 7.30461C7.11985 7.49002 7.01469 7.74083 7.01241 8.00303C7.01013 8.26523 7.11092 8.51783 7.29308 8.70643L10.5861 11.9994L7.29308 15.2924C7.19757 15.3847 7.12139 15.495 7.06898 15.617C7.01657 15.739 6.98898 15.8703 6.98783 16.003C6.98668 16.1358 7.01198 16.2675 7.06226 16.3904C7.11254 16.5133 7.18679 16.6249 7.28069 16.7188C7.37458 16.8127 7.48623 16.887 7.60913 16.9373C7.73202 16.9875 7.8637 17.0128 7.99648 17.0117C8.12926 17.0105 8.26048 16.9829 8.38249 16.9305C8.50449 16.8781 8.61483 16.8019 8.70708 16.7064L12.0001 13.4134L15.2931 16.7064C15.4817 16.8886 15.7343 16.9894 15.9965 16.9871C16.2587 16.9848 16.5095 16.8797 16.6949 16.6942C16.8803 16.5088 16.9855 16.258 16.9878 15.9958C16.99 15.7336 16.8892 15.481 16.7071 15.2924L13.4141 11.9994L16.7071 8.70643C16.8892 8.51783 16.99 8.26523 16.9878 8.00303C16.9855 7.74083 16.8803 7.49002 16.6949 7.30461C16.5095 7.1192 16.2587 7.01403 15.9965 7.01176C15.7343 7.00948 15.4817 7.11027 15.2931 7.29243L12.0001 10.5854L8.70708 7.29243Z" fill="#242529"/>
+                    </svg>
+                </button>
+                <div class="modal-overflow">
+                    <form class="modal__form">
+                        <div class="half__wrapper">
+                            <div class="input__wrapper">
+                                <label for="name" class="label small__text darkgrey__text">Ваше имя</label>
+                                <input type="text" id="name" class="input medium__text" placeholder="Text">
+                            </div>
+                            <div class="input__wrapper">
+                                <label for="phone" class="label small__text darkgrey__text">Телефон</label>
+                                <input type="number" id="phone" class="input medium__text" placeholder="Text">
+                            </div>
+                        </div>
+                        <div class="half__wrapper">
+                            <div class="input__wrapper">
+                                <label for="address" class="label small__text darkgrey__text">Ваш адрес</label>
+                                <input type="text" id="address" class="input medium__text" placeholder="Text">
+                            </div>
+                            <div class="input__wrapper">
+                                <label for="promo" class="label small__text darkgrey__text">Промокод</label>
+                                <input type="text" id="promo" class="input medium__text" placeholder="Text">
+                            </div>
+                        </div>
+                        <div class="input__wrapper">
+                            <label for="comment" class="label small__text darkgrey__text">Комментарий к заказу</label>
+                            <input type="text" id="comment" class="input medium__text" placeholder="Text">
+                        </div>
+                    </form>
+                    <h3 class="subtitle">Тип диеты</h3>
+                    <div class="flex_wrap">
+                        <button class="button button__text">Похудеть (1000 Ккал)</button>
+                        <button class="stroke__button button__text">Похудеть (1200 Ккал)</button>
+                        <button class="stroke__button button__text">Баланс (1500 Ккал)</button>
+                        <button class="stroke__button button__text">Баланс (2000 Ккал)</button>
+                        <button class="stroke__button button__text">Спорт (2500 Ккал)</button>
+                    </div>
+                    <h3 class="subtitle">Количество дней</h3>
+                    <div class="flex_wrap">
+                        <button class="button button__text">2 дня</button>
+                        <button class="stroke__button button__text">5 дней</button>
+                        <button class="stroke__button button__text">6 дней</button>
+                        <button class="stroke__button button__text">10 дней</button>
+                        <button class="stroke__button button__text">14 дней</button>
+                        <button class="stroke__button button__text">30 дней</button>
+                    </div>
+                    <div class="half__wrapper">
+                        <div class="input_radio__wrapper">
+                            <input type="checkbox" name="bonuses" id="bonuses"><label for="bonuses" class="medium__text input__radio">Использовать бонусы</label>
+                        </div>
+                        <div class="input__wrapper">
+                            <label for="phone" class="label small__text darkgrey__text">Введите количество бонусов</label>
+                            <input type="text" id="phone" class="input medium__text" placeholder="345 / 1000">
+                        </div>
+                    </div>
+                </div>
+                <button class="button button__text">Заказать</button>
+            </div>
+        </div>
+    
+        <div class="modal-layer active" id="sign-up-modal">
+            <div class="modal__wrapper small__modal">
+                <img src="img/large__logo.svg" alt="Logo">
+                <h3 class="subtitle">Регистрация</h3>
+                <button class="icon__button modal_close__btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.70708 7.29243C8.51848 7.11027 8.26588 7.00948 8.00368 7.01176C7.74148 7.01403 7.49067 7.1192 7.30526 7.30461C7.11985 7.49002 7.01469 7.74083 7.01241 8.00303C7.01013 8.26523 7.11092 8.51783 7.29308 8.70643L10.5861 11.9994L7.29308 15.2924C7.19757 15.3847 7.12139 15.495 7.06898 15.617C7.01657 15.739 6.98898 15.8703 6.98783 16.003C6.98668 16.1358 7.01198 16.2675 7.06226 16.3904C7.11254 16.5133 7.18679 16.6249 7.28069 16.7188C7.37458 16.8127 7.48623 16.887 7.60913 16.9373C7.73202 16.9875 7.8637 17.0128 7.99648 17.0117C8.12926 17.0105 8.26048 16.9829 8.38249 16.9305C8.50449 16.8781 8.61483 16.8019 8.70708 16.7064L12.0001 13.4134L15.2931 16.7064C15.4817 16.8886 15.7343 16.9894 15.9965 16.9871C16.2587 16.9848 16.5095 16.8797 16.6949 16.6942C16.8803 16.5088 16.9855 16.258 16.9878 15.9958C16.99 15.7336 16.8892 15.481 16.7071 15.2924L13.4141 11.9994L16.7071 8.70643C16.8892 8.51783 16.99 8.26523 16.9878 8.00303C16.9855 7.74083 16.8803 7.49002 16.6949 7.30461C16.5095 7.1192 16.2587 7.01403 15.9965 7.01176C15.7343 7.00948 15.4817 7.11027 15.2931 7.29243L12.0001 10.5854L8.70708 7.29243Z" fill="#242529"/>
+                    </svg>
+                </button>
+    
+                <div class="modal-overflow">
+                    <form action="" class="modal__form">
+                        <div class="input__wrapper">
+                            <label for="name" class="label small__text darkgrey__text">Ваше имя</label>
+                            <input type="text" id="name" class="input medium__text" placeholder="Text">
+                        </div>
+                        <div class="input__wrapper">
+                            <label for="birthday" class="label small__text darkgrey__text">Дата рождения</label>
+                            <input type="text" id="birthday" class="input medium__text" placeholder="Text">
+                        </div>
+                        <div class="input__wrapper">
+                            <label for="phone" class="label small__text darkgrey__text">Телефон</label>
+                            <input type="number" id="phone" class="input medium__text" placeholder="Text">
+                        </div>
+                        <div class="input__wrapper">
+                            <label for="e-mail" class="label small__text darkgrey__text">E-mail</label>
+                            <input type="email" id="e-mail" class="input medium__text" placeholder="Text">
+                        </div>
+                        <div class="input__wrapper">
+                            <label for="height" class="label small__text darkgrey__text">Ваш город</label>
+                            <input type="number" id="height" class="input medium__text pointer" placeholder="Text" readonly>
+                            <svg class="input__button" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.7524 16.0515L18.4024 10.3915C18.4962 10.2985 18.5706 10.1879 18.6213 10.066C18.6721 9.94417 18.6982 9.81347 18.6982 9.68146C18.6982 9.54944 18.6721 9.41874 18.6213 9.29688C18.5706 9.17502 18.4962 9.06442 18.4024 8.97146C18.2151 8.78521 17.9616 8.68066 17.6974 8.68066C17.4333 8.68066 17.1798 8.78521 16.9924 8.97146L11.9924 13.9215L7.04244 8.97146C6.85508 8.78521 6.60163 8.68066 6.33744 8.68066C6.07326 8.68066 5.81981 8.78521 5.63244 8.97146C5.53796 9.06407 5.46279 9.17452 5.41129 9.29639C5.35979 9.41827 5.33299 9.54915 5.33245 9.68146C5.33299 9.81376 5.35979 9.94465 5.41129 10.0665C5.46279 10.1884 5.53796 10.2988 5.63244 10.3915L11.2824 16.0515C11.3761 16.153 11.4897 16.234 11.6162 16.2894C11.7427 16.3448 11.8793 16.3734 12.0174 16.3734C12.1555 16.3734 12.2922 16.3448 12.4187 16.2894C12.5451 16.234 12.6588 16.153 12.7524 16.0515Z" fill="#242529"/>
+                            </svg>
+                            <div class="input_select__wrapper">
+                                <ul class="input__select medium__text mt-8" style="display: none;">
+                                    <li class="pointer">Ярославль</li>
+                                    <li class="pointer">Иваново</li>
+                                    <li class="pointer">Шуя</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+    
+                <div class="modal_button__wrapper">
+                    <button class="button button__text">Зарегистрироваться</button>
+                    <p class="mediumbold__text transparent_black__text">Уже зарегистрированы?</p>
+                    <button class="stroke__button button__text">Войти</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal-layer active" id="sign-in-modal">
+            <div class="modal__wrapper small__modal">
+                <img src="img/large__logo.svg" alt="Logo">
+                <h3 class="subtitle">Вход в личный кабинет</h3>
+                <button class="icon__button modal_close__btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.70708 7.29243C8.51848 7.11027 8.26588 7.00948 8.00368 7.01176C7.74148 7.01403 7.49067 7.1192 7.30526 7.30461C7.11985 7.49002 7.01469 7.74083 7.01241 8.00303C7.01013 8.26523 7.11092 8.51783 7.29308 8.70643L10.5861 11.9994L7.29308 15.2924C7.19757 15.3847 7.12139 15.495 7.06898 15.617C7.01657 15.739 6.98898 15.8703 6.98783 16.003C6.98668 16.1358 7.01198 16.2675 7.06226 16.3904C7.11254 16.5133 7.18679 16.6249 7.28069 16.7188C7.37458 16.8127 7.48623 16.887 7.60913 16.9373C7.73202 16.9875 7.8637 17.0128 7.99648 17.0117C8.12926 17.0105 8.26048 16.9829 8.38249 16.9305C8.50449 16.8781 8.61483 16.8019 8.70708 16.7064L12.0001 13.4134L15.2931 16.7064C15.4817 16.8886 15.7343 16.9894 15.9965 16.9871C16.2587 16.9848 16.5095 16.8797 16.6949 16.6942C16.8803 16.5088 16.9855 16.258 16.9878 15.9958C16.99 15.7336 16.8892 15.481 16.7071 15.2924L13.4141 11.9994L16.7071 8.70643C16.8892 8.51783 16.99 8.26523 16.9878 8.00303C16.9855 7.74083 16.8803 7.49002 16.6949 7.30461C16.5095 7.1192 16.2587 7.01403 15.9965 7.01176C15.7343 7.00948 15.4817 7.11027 15.2931 7.29243L12.0001 10.5854L8.70708 7.29243Z" fill="#242529"/>
+                    </svg>
+                </button>
+                <form action="" class="modal__form">
+                    <div class="input__wrapper">
+                        <label for="e-mail" class="label small__text darkgrey__text">E-mail</label>
+                        <input type="email" id="e-mail" class="input medium__text" placeholder="|">
+                    </div>
+                    <div class="input__wrapper">
+                        <label for="password" class="label small__text darkgrey__text">Пароль</label>
+                        <input type="password" id="password" class="input medium__text" placeholder="Text">
+                        <button class="input__button"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.9201 12.1C19.9001 7.41 16.1001 4.5 12.0001 4.5C7.90007 4.5 4.10007 7.41 2.08007 12.1C2.025 12.2262 1.99658 12.3623 1.99658 12.5C1.99658 12.6377 2.025 12.7738 2.08007 12.9C4.10007 17.59 7.90007 20.5 12.0001 20.5C16.1001 20.5 19.9001 17.59 21.9201 12.9C21.9751 12.7738 22.0036 12.6377 22.0036 12.5C22.0036 12.3623 21.9751 12.2262 21.9201 12.1ZM12.0001 18.5C8.83007 18.5 5.83007 16.21 4.10007 12.5C5.83007 8.79 8.83007 6.5 12.0001 6.5C15.1701 6.5 18.1701 8.79 19.9001 12.5C18.1701 16.21 15.1701 18.5 12.0001 18.5ZM12.0001 8.5C11.2089 8.5 10.4356 8.7346 9.77779 9.17412C9.11999 9.61365 8.6073 10.2384 8.30455 10.9693C8.0018 11.7002 7.92258 12.5044 8.07693 13.2804C8.23127 14.0563 8.61223 14.769 9.17164 15.3284C9.73105 15.8878 10.4438 16.2688 11.2197 16.4231C11.9956 16.5775 12.7999 16.4983 13.5308 16.1955C14.2617 15.8928 14.8864 15.3801 15.3259 14.7223C15.7655 14.0645 16.0001 13.2911 16.0001 12.5C16.0001 11.4391 15.5786 10.4217 14.8285 9.67157C14.0783 8.92143 13.0609 8.5 12.0001 8.5ZM12.0001 14.5C11.6045 14.5 11.2178 14.3827 10.8889 14.1629C10.56 13.9432 10.3037 13.6308 10.1523 13.2654C10.0009 12.8999 9.96133 12.4978 10.0385 12.1098C10.1157 11.7219 10.3061 11.3655 10.5859 11.0858C10.8656 10.8061 11.2219 10.6156 11.6099 10.5384C11.9978 10.4613 12.4 10.5009 12.7654 10.6522C13.1309 10.8036 13.4432 11.06 13.663 11.3889C13.8828 11.7178 14.0001 12.1044 14.0001 12.5C14.0001 13.0304 13.7894 13.5391 13.4143 13.9142C13.0392 14.2893 12.5305 14.5 12.0001 14.5Z" fill="#242529"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <button class="button button__text">Войти</button>
+                <button class="stroke__button button__text">Восстановить пароль</button>
+            </div>
+        </div>
+    
+        <div class="modal-layer active" id="feedback-modal">
+            <div class="modal__wrapper small__modal">
+                <img src="img/large__logo.svg" alt="Logo">
+                <h3 class="subtitle">Заказать обратный звонок</h3>
+                <p class="medium__text text-center">Оставьте заявку, и наш менеджер свяжется с вами в течение 10 минут</p>
+                <button class="icon__button modal_close__btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.70708 7.29243C8.51848 7.11027 8.26588 7.00948 8.00368 7.01176C7.74148 7.01403 7.49067 7.1192 7.30526 7.30461C7.11985 7.49002 7.01469 7.74083 7.01241 8.00303C7.01013 8.26523 7.11092 8.51783 7.29308 8.70643L10.5861 11.9994L7.29308 15.2924C7.19757 15.3847 7.12139 15.495 7.06898 15.617C7.01657 15.739 6.98898 15.8703 6.98783 16.003C6.98668 16.1358 7.01198 16.2675 7.06226 16.3904C7.11254 16.5133 7.18679 16.6249 7.28069 16.7188C7.37458 16.8127 7.48623 16.887 7.60913 16.9373C7.73202 16.9875 7.8637 17.0128 7.99648 17.0117C8.12926 17.0105 8.26048 16.9829 8.38249 16.9305C8.50449 16.8781 8.61483 16.8019 8.70708 16.7064L12.0001 13.4134L15.2931 16.7064C15.4817 16.8886 15.7343 16.9894 15.9965 16.9871C16.2587 16.9848 16.5095 16.8797 16.6949 16.6942C16.8803 16.5088 16.9855 16.258 16.9878 15.9958C16.99 15.7336 16.8892 15.481 16.7071 15.2924L13.4141 11.9994L16.7071 8.70643C16.8892 8.51783 16.99 8.26523 16.9878 8.00303C16.9855 7.74083 16.8803 7.49002 16.6949 7.30461C16.5095 7.1192 16.2587 7.01403 15.9965 7.01176C15.7343 7.00948 15.4817 7.11027 15.2931 7.29243L12.0001 10.5854L8.70708 7.29243Z" fill="#242529"/>
+                    </svg>
+                </button>
+                <form action="" class="modal__form">
+                    <div class="input__wrapper">
+                        <label for="name" class="label small__text darkgrey__text">Ваше имя</label>
+                        <input type="text" id="name" class="input medium__text" placeholder="|">
+                    </div>
+                    <div class="input__wrapper">
+                        <label for="phone" class="label small__text darkgrey__text">Телефон</label>
+                        <input type="number" id="phone" class="input medium__text" placeholder="|">
+                    </div>
+                    <div class="input_radio__wrapper">
+                        <input type="checkbox" name="agreement" id="agreement"><label for="agreement" class="small__text input__radio inline__input darkgrey__text">Нажимая на кнопку “Заказать звонок”, вы соглашаетесь с <span class="span small__text">Политикой конфиденциальности и Обработку персональных данных</span></label>
+                    </div>
+                </form>
+                <button class="button button__text">Заказать звонок</button>
+            </div>
+        </div>
+    
+        <div class="modal-layer active" id="invite-friend-modal">
+            <div class="modal__wrapper small__modal invite__modal">
+                <h3 class="subtitle modal__title green__text">ПРИГЛАСИ ДРУГА — ПОЛУЧИ БОНУСЫ</h3>
+                <button class="icon__button modal_close__btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.70708 7.29243C8.51848 7.11027 8.26588 7.00948 8.00368 7.01176C7.74148 7.01403 7.49067 7.1192 7.30526 7.30461C7.11985 7.49002 7.01469 7.74083 7.01241 8.00303C7.01013 8.26523 7.11092 8.51783 7.29308 8.70643L10.5861 11.9994L7.29308 15.2924C7.19757 15.3847 7.12139 15.495 7.06898 15.617C7.01657 15.739 6.98898 15.8703 6.98783 16.003C6.98668 16.1358 7.01198 16.2675 7.06226 16.3904C7.11254 16.5133 7.18679 16.6249 7.28069 16.7188C7.37458 16.8127 7.48623 16.887 7.60913 16.9373C7.73202 16.9875 7.8637 17.0128 7.99648 17.0117C8.12926 17.0105 8.26048 16.9829 8.38249 16.9305C8.50449 16.8781 8.61483 16.8019 8.70708 16.7064L12.0001 13.4134L15.2931 16.7064C15.4817 16.8886 15.7343 16.9894 15.9965 16.9871C16.2587 16.9848 16.5095 16.8797 16.6949 16.6942C16.8803 16.5088 16.9855 16.258 16.9878 15.9958C16.99 15.7336 16.8892 15.481 16.7071 15.2924L13.4141 11.9994L16.7071 8.70643C16.8892 8.51783 16.99 8.26523 16.9878 8.00303C16.9855 7.74083 16.8803 7.49002 16.6949 7.30461C16.5095 7.1192 16.2587 7.01403 15.9965 7.01176C15.7343 7.00948 15.4817 7.11027 15.2931 7.29243L12.0001 10.5854L8.70708 7.29243Z" fill="#242529"/>
+                    </svg>
+                </button>
+                <div class="modal-overflow">
+                    <div class="invite_modal__text">
+                        <p class="medium__text">В компании FoodPower действует отличная акция — «Пригласи друга». Это прекрасная возможность поделиться нашей вкусной едой с вашими друзьями и получить приятные бонусы!</p>
+                        <p class="medium__text">⬇️ Вот как это работает:</p>
+                        <p class="medium__text">Если ваш друг еще не заказывал у нас и не зарегистрирован в Личном Кабинете, то за его регистрацию мы начислим ему 300 бонусов. Эти бонусы он сможет потратить на любой заказ, кроме «Пробного за 950₽».</p>
+                        <p class="medium__text">Кроме того, мы также предоставим вашему другу скидку 10% на его первый заказ, исключая «Пробного за 950₽».</p>
+                        <p class="medium__text">А теперь самое интересное — в рамках этой акции мы начислим вам, тому кто привел друга, целых 1500 бонусов. Эти бонусы будут начислены на ваш счет с комментарием «за друга» ☀️</p>
+                        <p class="medium__text">Однако, вы сможете использовать эти бонусы только после того, как ваш друг сделает свой первый заказ. Не забудьте, что обработку бонусов за друга осуществляет только наш менеджер.</p>
+                        <p class="medium__text">Зовите своих друзей и наслаждайтесь нашим питанием вместе 💚</p>
+                    </div>  
+                </div>
+                <button class="button button__text">Кнопка действия</button>
+            </div>
+        </div>
+    
+        <div class="modal-layer active" id="change-adress-modal">
+            <div class="modal__wrapper small__modal modal_flex__left">
+                <h3 class="subtitle modal__title green__text">Изменить адрес доставки</h3>
+                <button class="icon__button modal_close__btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.70708 7.29243C8.51848 7.11027 8.26588 7.00948 8.00368 7.01176C7.74148 7.01403 7.49067 7.1192 7.30526 7.30461C7.11985 7.49002 7.01469 7.74083 7.01241 8.00303C7.01013 8.26523 7.11092 8.51783 7.29308 8.70643L10.5861 11.9994L7.29308 15.2924C7.19757 15.3847 7.12139 15.495 7.06898 15.617C7.01657 15.739 6.98898 15.8703 6.98783 16.003C6.98668 16.1358 7.01198 16.2675 7.06226 16.3904C7.11254 16.5133 7.18679 16.6249 7.28069 16.7188C7.37458 16.8127 7.48623 16.887 7.60913 16.9373C7.73202 16.9875 7.8637 17.0128 7.99648 17.0117C8.12926 17.0105 8.26048 16.9829 8.38249 16.9305C8.50449 16.8781 8.61483 16.8019 8.70708 16.7064L12.0001 13.4134L15.2931 16.7064C15.4817 16.8886 15.7343 16.9894 15.9965 16.9871C16.2587 16.9848 16.5095 16.8797 16.6949 16.6942C16.8803 16.5088 16.9855 16.258 16.9878 15.9958C16.99 15.7336 16.8892 15.481 16.7071 15.2924L13.4141 11.9994L16.7071 8.70643C16.8892 8.51783 16.99 8.26523 16.9878 8.00303C16.9855 7.74083 16.8803 7.49002 16.6949 7.30461C16.5095 7.1192 16.2587 7.01403 15.9965 7.01176C15.7343 7.00948 15.4817 7.11027 15.2931 7.29243L12.0001 10.5854L8.70708 7.29243Z" fill="#242529"/>
+                    </svg>
+                </button>
+                <div class="modal-overflow">
+                    <form action="" class="modal__form">
+                        <div class="input_radio__wrapper">
+                            <input type="radio" name="address" id="delivery1"><label for="delivery1" class="medium__text input__radio">Ул. Пушкина, д. 37, 2 подъезд, 20 Этаж, Кв. 20, код домофона: 12345</label>
+                        </div>
+                        <div class="input_radio__wrapper">
+                            <input type="radio" name="address" id="delivery2"><label for="delivery2" class="medium__text input__radio">Ул. Лермонтова, д. 37, 2 подъезд, 20 Этаж, Кв. 20, код домофона: 12345</label>
+                        </div>
+                    </form>
+                    <p class="mediumbold__text green__text">Добавить новый адрес</p>
+                    <form action="" class="modal__form">
+                        <div class="half__wrapper">
+                            <div class="input__wrapper">
+                                <label for="street" class="label small__text darkgrey__text">Улица</label>
+                                <input type="text" id="street" class="input medium__text" value="Пушкина, д. 37">
+                            </div>
+                            <div class="input__wrapper">
+                                <label for="entry" class="label small__text darkgrey__text">Подъезд</label>
+                                <input type="number" id="entry" class="input medium__text" value="2">
+                            </div>
+                        </div>
+                        <div class="half__wrapper">
+                            <div class="input__wrapper">
+                                <label for="floor" class="label small__text darkgrey__text">Этаж</label>
+                                <input type="number" id="floor" class="input medium__text" value="20">
+                            </div>
+                            <div class="input__wrapper">
+                                <label for="room" class="label small__text darkgrey__text">Квартира</label>
+                                <input type="number" id="room" class="input medium__text" value="20">
+                            </div>
+                        </div>
+                        <div class="input__wrapper">
+                            <label for="comment" class="label small__text darkgrey__text">Комментарий</label>
+                            <input type="text" id="comment" class="input medium__text" value="код домофона: 12345">
+                        </div>
+                    </form>
+                </div>
+    
+                <div class="flex__buttons">
+                    <button class="button button__text">Изменить</button>
+                    <button class="stroke__button button__text">Отмена</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal-layer active" id="add-adress-modal">
+            <div class="modal__wrapper small__modal modal_flex__left">
+                <h3 class="subtitle modal__title green__text">Добавить новый адрес</h3>
+                <button class="icon__button modal_close__btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.70708 7.29243C8.51848 7.11027 8.26588 7.00948 8.00368 7.01176C7.74148 7.01403 7.49067 7.1192 7.30526 7.30461C7.11985 7.49002 7.01469 7.74083 7.01241 8.00303C7.01013 8.26523 7.11092 8.51783 7.29308 8.70643L10.5861 11.9994L7.29308 15.2924C7.19757 15.3847 7.12139 15.495 7.06898 15.617C7.01657 15.739 6.98898 15.8703 6.98783 16.003C6.98668 16.1358 7.01198 16.2675 7.06226 16.3904C7.11254 16.5133 7.18679 16.6249 7.28069 16.7188C7.37458 16.8127 7.48623 16.887 7.60913 16.9373C7.73202 16.9875 7.8637 17.0128 7.99648 17.0117C8.12926 17.0105 8.26048 16.9829 8.38249 16.9305C8.50449 16.8781 8.61483 16.8019 8.70708 16.7064L12.0001 13.4134L15.2931 16.7064C15.4817 16.8886 15.7343 16.9894 15.9965 16.9871C16.2587 16.9848 16.5095 16.8797 16.6949 16.6942C16.8803 16.5088 16.9855 16.258 16.9878 15.9958C16.99 15.7336 16.8892 15.481 16.7071 15.2924L13.4141 11.9994L16.7071 8.70643C16.8892 8.51783 16.99 8.26523 16.9878 8.00303C16.9855 7.74083 16.8803 7.49002 16.6949 7.30461C16.5095 7.1192 16.2587 7.01403 15.9965 7.01176C15.7343 7.00948 15.4817 7.11027 15.2931 7.29243L12.0001 10.5854L8.70708 7.29243Z" fill="#242529"/>
+                    </svg>
+                </button>
+                <div class="modal-overflow">
+                    <form action="" class="modal__form">
+                        <div class="half__wrapper">
+                            <div class="input__wrapper">
+                                <label for="street" class="label small__text darkgrey__text">Ваш адрес</label>
+                                <input type="text" id="street" class="input medium__text" placeholder="Text">
+                            </div>
+                            <div class="input__wrapper">
+                                <label for="entry" class="label small__text darkgrey__text">Подъезд</label>
+                                <input type="number" id="entry" class="input medium__text" placeholder="Text">
+                            </div>
+                        </div>
+                        <div class="half__wrapper">
+                            <div class="input__wrapper">
+                                <label for="floor" class="label small__text darkgrey__text">Этаж</label>
+                                <input type="number" id="floor" class="input medium__text" placeholder="Text">
+                            </div>
+                            <div class="input__wrapper">
+                                <label for="room" class="label small__text darkgrey__text">Квартира</label>
+                                <input type="number" id="room" class="input medium__text" placeholder="Text">
+                            </div>
+                        </div>
+                        <div class="input__wrapper">
+                            <label for="comment" class="label small__text darkgrey__text">Комментарий</label>
+                            <input type="text" id="comment" class="input medium__text" placeholder="Text">
+                        </div>
+                    </form>
+                </div>
+                <div class="flex__buttons">
+                    <button class="button button__text">Сохранить</button>
+                    <button class="stroke__button button__text">Отмена</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal-layer active" id="change-profile-info-modal">
+            <div class="modal__wrapper small__modal modal_flex__left">
+                <h3 class="subtitle modal__title green__text">Редактирование данных</h3>
+                <button class="icon__button modal_close__btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.70708 7.29243C8.51848 7.11027 8.26588 7.00948 8.00368 7.01176C7.74148 7.01403 7.49067 7.1192 7.30526 7.30461C7.11985 7.49002 7.01469 7.74083 7.01241 8.00303C7.01013 8.26523 7.11092 8.51783 7.29308 8.70643L10.5861 11.9994L7.29308 15.2924C7.19757 15.3847 7.12139 15.495 7.06898 15.617C7.01657 15.739 6.98898 15.8703 6.98783 16.003C6.98668 16.1358 7.01198 16.2675 7.06226 16.3904C7.11254 16.5133 7.18679 16.6249 7.28069 16.7188C7.37458 16.8127 7.48623 16.887 7.60913 16.9373C7.73202 16.9875 7.8637 17.0128 7.99648 17.0117C8.12926 17.0105 8.26048 16.9829 8.38249 16.9305C8.50449 16.8781 8.61483 16.8019 8.70708 16.7064L12.0001 13.4134L15.2931 16.7064C15.4817 16.8886 15.7343 16.9894 15.9965 16.9871C16.2587 16.9848 16.5095 16.8797 16.6949 16.6942C16.8803 16.5088 16.9855 16.258 16.9878 15.9958C16.99 15.7336 16.8892 15.481 16.7071 15.2924L13.4141 11.9994L16.7071 8.70643C16.8892 8.51783 16.99 8.26523 16.9878 8.00303C16.9855 7.74083 16.8803 7.49002 16.6949 7.30461C16.5095 7.1192 16.2587 7.01403 15.9965 7.01176C15.7343 7.00948 15.4817 7.11027 15.2931 7.29243L12.0001 10.5854L8.70708 7.29243Z" fill="#242529"/>
+                    </svg>
+                </button>
+                <form action="" class="modal__form">
+                    <div class="input__wrapper">
+                        <label for="name" class="label small__text darkgrey__text">Ваше имя</label>
+                        <input type="text" id="name" class="input medium__text" placeholder="Text">
+                    </div>
+                    <div class="input__wrapper">
+                        <label for="phone" class="label small__text darkgrey__text">Телефон</label>
+                        <input type="number" id="phone" class="input medium__text" placeholder="Text">
+                    </div>
+                    <div class="input__wrapper">
+                        <label for="birthday" class="label small__text darkgrey__text">Дата рождения</label>
+                        <input type="text" id="birthday" class="input medium__text" placeholder="Text">
+                    </div>
+                    <div class="input__wrapper">
+                        <label for="e-mail" class="label small__text darkgrey__text">E-mail</label>
+                        <input type="email" id="e-mail" class="input medium__text" placeholder="Text">
+                    </div>
+                </form>
+                <div class="flex__buttons">
+                    <button class="button button__text">Сохранить</button>
+                    <button class="stroke__button button__text">Отмена</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal-layer active" id="for-suppliers-modal">
+            <div class="modal__wrapper small__modal modal_flex__left">
+                <h3 class="subtitle modal__title green__text">Поставщикам</h3>
+                <button class="icon__button modal_close__btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.70708 7.29243C8.51848 7.11027 8.26588 7.00948 8.00368 7.01176C7.74148 7.01403 7.49067 7.1192 7.30526 7.30461C7.11985 7.49002 7.01469 7.74083 7.01241 8.00303C7.01013 8.26523 7.11092 8.51783 7.29308 8.70643L10.5861 11.9994L7.29308 15.2924C7.19757 15.3847 7.12139 15.495 7.06898 15.617C7.01657 15.739 6.98898 15.8703 6.98783 16.003C6.98668 16.1358 7.01198 16.2675 7.06226 16.3904C7.11254 16.5133 7.18679 16.6249 7.28069 16.7188C7.37458 16.8127 7.48623 16.887 7.60913 16.9373C7.73202 16.9875 7.8637 17.0128 7.99648 17.0117C8.12926 17.0105 8.26048 16.9829 8.38249 16.9305C8.50449 16.8781 8.61483 16.8019 8.70708 16.7064L12.0001 13.4134L15.2931 16.7064C15.4817 16.8886 15.7343 16.9894 15.9965 16.9871C16.2587 16.9848 16.5095 16.8797 16.6949 16.6942C16.8803 16.5088 16.9855 16.258 16.9878 15.9958C16.99 15.7336 16.8892 15.481 16.7071 15.2924L13.4141 11.9994L16.7071 8.70643C16.8892 8.51783 16.99 8.26523 16.9878 8.00303C16.9855 7.74083 16.8803 7.49002 16.6949 7.30461C16.5095 7.1192 16.2587 7.01403 15.9965 7.01176C15.7343 7.00948 15.4817 7.11027 15.2931 7.29243L12.0001 10.5854L8.70708 7.29243Z" fill="#242529"/>
+                    </svg>
+                </button>
+                <div class="modal-overflow">
+                    <form action="" class="modal__form">
+                        <div class="input__wrapper">
+                            <label for="name" class="label small__text darkgrey__text">Контактное лицо</label>
+                            <input type="text" id="name" class="input medium__text" placeholder="Text">
+                        </div>
+                        <div class="input__wrapper">
+                            <label for="company" class="label small__text darkgrey__text">Название и город компании</label>
+                            <input type="text" id="company" class="input medium__text" placeholder="Text">
+                        </div>
+                        <div class="input__wrapper">
+                            <label for="e-mail" class="label small__text darkgrey__text">E-mail</label>
+                            <input type="email" id="e-mail" class="input medium__text" placeholder="Text">
+                        </div>
+                        <div class="input__wrapper">
+                            <label for="type" class="label small__text darkgrey__text">Тип сырья</label>
+                            <input type="text" id="type" class="input medium__text" placeholder="Text">
+                        </div>
+                        <div class="input__wrapper">
+                            <label for="spb" class="label small__text darkgrey__text">Возможность логистики до СПБ</label>
+                            <input type="text" id="spb" class="input medium__text" placeholder="Text">
+                        </div>
+                        <div class="input__wrapper">
+                            <label for="min" class="label small__text darkgrey__text">Минимальный заказ</label>
+                            <input type="text" id="min" class="input medium__text" placeholder="(кол-во и ед.измерения, при наличии)">
+                        </div>
+                        <div class="input__wrapper">
+                            <textarea type="text" id="desc" class="input medium__text textarea__modal" placeholder="Описание вашего продукта для поставки"></textarea>
+                        </div>
+                    </form>
+                    <p class="medium__text transparent_black__text">Для максимально быстрой обработки запроса укажите всю необходимую информацию: тип поставляемого сырья, ценовое предложение, сроки годности, возможность логистики до СПБ</p>
+                </div>
+                <div class="flex__buttons"><button class="button button__text">Отправить</button></div>
+            </div>
+        </div>
+    
+
+        <div class="notification__wrapper small_notification">
+            <p class="smallbold__text green__text">Важно!</p>
+            <button class="icon__button notification_close__btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.70708 7.29243C8.51848 7.11027 8.26588 7.00948 8.00368 7.01176C7.74148 7.01403 7.49067 7.1192 7.30526 7.30461C7.11985 7.49002 7.01469 7.74083 7.01241 8.00303C7.01013 8.26523 7.11092 8.51783 7.29308 8.70643L10.5861 11.9994L7.29308 15.2924C7.19757 15.3847 7.12139 15.495 7.06898 15.617C7.01657 15.739 6.98898 15.8703 6.98783 16.003C6.98668 16.1358 7.01198 16.2675 7.06226 16.3904C7.11254 16.5133 7.18679 16.6249 7.28069 16.7188C7.37458 16.8127 7.48623 16.887 7.60913 16.9373C7.73202 16.9875 7.8637 17.0128 7.99648 17.0117C8.12926 17.0105 8.26048 16.9829 8.38249 16.9305C8.50449 16.8781 8.61483 16.8019 8.70708 16.7064L12.0001 13.4134L15.2931 16.7064C15.4817 16.8886 15.7343 16.9894 15.9965 16.9871C16.2587 16.9848 16.5095 16.8797 16.6949 16.6942C16.8803 16.5088 16.9855 16.258 16.9878 15.9958C16.99 15.7336 16.8892 15.481 16.7071 15.2924L13.4141 11.9994L16.7071 8.70643C16.8892 8.51783 16.99 8.26523 16.9878 8.00303C16.9855 7.74083 16.8803 7.49002 16.6949 7.30461C16.5095 7.1192 16.2587 7.01403 15.9965 7.01176C15.7343 7.00948 15.4817 7.11027 15.2931 7.29243L12.0001 10.5854L8.70708 7.29243Z" fill="#242529"/>
+                </svg>
+            </button>
+            <p class="small__text black__text notification__text">Мы доставляем рационы питания на период от 2-х до 30-ти дней</p>
+        </div>
+
+        <div class="notification__wrapper">
+            <p class="smallbold__text green__text">Важно!</p>
+            <button class="icon__button notification_close__btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.70708 7.29243C8.51848 7.11027 8.26588 7.00948 8.00368 7.01176C7.74148 7.01403 7.49067 7.1192 7.30526 7.30461C7.11985 7.49002 7.01469 7.74083 7.01241 8.00303C7.01013 8.26523 7.11092 8.51783 7.29308 8.70643L10.5861 11.9994L7.29308 15.2924C7.19757 15.3847 7.12139 15.495 7.06898 15.617C7.01657 15.739 6.98898 15.8703 6.98783 16.003C6.98668 16.1358 7.01198 16.2675 7.06226 16.3904C7.11254 16.5133 7.18679 16.6249 7.28069 16.7188C7.37458 16.8127 7.48623 16.887 7.60913 16.9373C7.73202 16.9875 7.8637 17.0128 7.99648 17.0117C8.12926 17.0105 8.26048 16.9829 8.38249 16.9305C8.50449 16.8781 8.61483 16.8019 8.70708 16.7064L12.0001 13.4134L15.2931 16.7064C15.4817 16.8886 15.7343 16.9894 15.9965 16.9871C16.2587 16.9848 16.5095 16.8797 16.6949 16.6942C16.8803 16.5088 16.9855 16.258 16.9878 15.9958C16.99 15.7336 16.8892 15.481 16.7071 15.2924L13.4141 11.9994L16.7071 8.70643C16.8892 8.51783 16.99 8.26523 16.9878 8.00303C16.9855 7.74083 16.8803 7.49002 16.6949 7.30461C16.5095 7.1192 16.2587 7.01403 15.9965 7.01176C15.7343 7.00948 15.4817 7.11027 15.2931 7.29243L12.0001 10.5854L8.70708 7.29243Z" fill="#242529"/>
+                </svg>
+            </button>
+            <p class="small__text black__text notification__text">Мы следим за разнообразием нашего меню, поэтому блюда, представленные на сайте могут отличаться от тех, что вам привезут. Мы обещаем, что количество калорий не изменится.</p>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
