@@ -116,3 +116,17 @@ if (document.querySelector('.footer__item')) {
         })
     })
 }
+
+if (document.querySelector('.input_select__wrapper')) {
+    document.querySelectorAll('.input_select__wrapper').forEach((el) => {
+        let input = el.parentElement.querySelector('input')
+        el.parentElement.addEventListener('click', (e) => {
+            e.currentTarget.lastElementChild.classList.toggle('active')
+        })
+        el.querySelectorAll('.pointer').forEach((el) => {
+            el.addEventListener('click', (e) => {
+                input.value = e.currentTarget.innerHTML
+            })
+        })
+    })
+}

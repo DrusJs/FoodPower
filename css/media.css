@@ -206,6 +206,9 @@
     .modal__wrapper {
         max-width: 620px;
     }
+    .modal__wrapper.datetime__modal {
+        max-width: 394px;
+    }
     .main-banner-section .swiper-slide {
         flex-direction: column-reverse;
     }
@@ -492,5 +495,24 @@
     } 
     .order_info__block, .order_info__large {
         width: 100%;
+    }
+    .air-datepicker-body--cells.-days-, .air-datepicker-body--day-names {
+        gap: 8px 8px;
+    }
+}
+
+@media (hover: hover) {
+    .button:hover {
+        background-color: var(--color-lightgreen);
+    }
+    .stroke__button:hover {
+        border: 1px solid var(--color-lightgreen);
+        color: var(--color-lightgreen);
+    }
+    .stroke__button:hover path {
+        fill: var(--color-lightgreen);
+    }
+    .header__link:hover, .footer__item a:hover {
+        color: var(--color-green);
     }
 }

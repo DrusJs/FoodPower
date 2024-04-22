@@ -189,6 +189,7 @@ body.disable--scroll {
     border-radius: 50px;
     height: 44px;
     cursor: pointer;
+    transition: 260ms ease-out;
 }
 
 .burger-button {
@@ -299,6 +300,10 @@ body.disable--scroll {
     align-items: center;
     height: 44px;
     cursor: pointer;
+    transition: 260ms ease-out;
+}
+.stroke__button path {
+    transition: 260ms ease-out;
 }
 
 .white_stroke__button {
@@ -526,6 +531,7 @@ input:checked + .input__radio::before {
 .header__link {
     max-width: 108px;
     text-align: center;
+    transition: 260ms ease-out;
 }
 
 .header__select_wrapper {
@@ -1635,13 +1641,13 @@ input:checked + .input__radio::before {
     font-weight: 500;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
 }
 .datetime-picker .small__text {
     order: 1;
 }
 .datetime-picker input {
     order: 2;
+    height: 20px;
     background-color: transparent;
     width: fit-content;
     border: none;
@@ -1651,6 +1657,11 @@ input:checked + .input__radio::before {
     font-weight: 700;
     color: var(--color-green);
     margin-left: 8px;
+}
+
+.flex-datetime {
+    display: flex;
+    order: 3;
 }
 
 .air-datepicker {
@@ -1740,6 +1751,7 @@ input:checked + .input__radio::before {
 
 .footer__item a {
     text-decoration: none;
+    transition: 260ms ease-out;
 }
 
 .footer__social_media {
@@ -1840,6 +1852,10 @@ input:checked + .input__radio::before {
 
 .small__modal {
     max-width: 600px;
+}
+
+.datetime__modal {
+    max-width: 394px;
 }
 
 .modal_close__btn {
