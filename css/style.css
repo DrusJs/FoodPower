@@ -353,6 +353,13 @@ body.disable--scroll {
     width: 100%;
 }
 
+.input__wrapper .absolute-bonus {
+    color: var(--color-green);
+    position: absolute;
+    left: 70px;
+    top: 26px;
+}
+
 .input__radio.inline__input {
     display: block;
     position: relative;
