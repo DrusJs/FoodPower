@@ -349,7 +349,10 @@
         right: -110%;
     }
     .switch__tab {
-        width: 66px;
+        width: 70px;
+        white-space: nowrap;
+        padding: 8px;
+        height: auto;
     }
     .calc__form {
         padding: 24px 18px;
@@ -479,6 +482,10 @@
     .border__banner {
         flex-direction: column;
         gap: 16px;
+        align-items: flex-start;
+    }
+    .border_banner__buttons {
+        gap: 16px;
     }
     .border__banner .button {
         width: 100%;
@@ -498,6 +505,18 @@
     }
     .air-datepicker-body--cells.-days-, .air-datepicker-body--day-names {
         gap: 8px 8px;
+    }
+    .notification__wrapper {
+        right: 20px;
+        left: 20px;
+    }
+    .blog__card {
+        width: 100%;
+        padding-bottom: 20px;
+        height: auto;
+    }
+    .blog_img__wrapper, .blog__img {
+        width: 100%;
     }
 }
 
